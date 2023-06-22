@@ -6,7 +6,7 @@
 parameters:
     env(MONGODB_URL): ''
     env(MONGODB_DB): ''
-    mongodb_server: "mongodb://root:root@localhost:27017/?authSource=auth-db"
+    mongodb_server: 'mongodb://%env(USERDB)%:%env(PASSWORDDB)%@localhost:27017/?authSource=auth-db'
 
 services:
     # default configuration for services in *this* file
